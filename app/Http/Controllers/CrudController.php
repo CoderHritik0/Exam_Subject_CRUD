@@ -25,5 +25,11 @@ class CrudController extends Controller
             $exam_subject->practical_totalMarks=$req->Total_Marks_of_Practical_Exam;
             $exam_subject->practical_passingMarks=$req->Passing_Marks_of_Practical_Exam;
             $exam_subject->save();
+            return redirect('/Table');
+    }
+    function showData()
+    {
+        $data= exam_subject::all();
+        return view('data',['Exam_Subjects'=>$data]);
     }
 }
