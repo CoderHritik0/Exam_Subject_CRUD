@@ -303,7 +303,8 @@
                                 <td>{{ $i["practical_totalMarks"] }}</td>
                                 <td>{{ $i["practical_passingMarks"] }}</td>
                                 <td><button type="button" id={{$i['esm_id']}} class="edit btn btn-outline-primary m-1" data-bs-toggle="modal" data-bs-target="#EditModal">Edit</button>
-                                <a href={{'delete/'.$i['esm_id']}} onclick="return confirm('Are you sure to want to delete it?')"><button class='delete btn btn-outline-danger m-1'>Delete</button></a></td>
+                                <a href={{'delete/'.$i['esm_id']}} onclick="return confirm('Are you sure to want to delete it?')"><button class='delete btn btn-outline-danger m-1'>Delete</button></a>
+                                <a href={{'disable/'.$i['esm_id']}} onclick="return confirm('Are you sure to want to disable it?')"><button class='disable btn btn-outline-warning m-1'>Disable</button></a></td>
                             </tr>
                             @endif
                         @endforeach 

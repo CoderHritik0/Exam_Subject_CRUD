@@ -72,4 +72,19 @@ class CrudController extends Controller
             return redirect()->action([CrudController::class,'showData']);
         }
     }
+    function disable($esm_id)
+    {
+        $current_date_time = \Carbon\Carbon::now()->toDateTimeString();
+        $check= DB::table('exam_subjects')
+        ->where('esm_id',$esm_id)
+        ->update(
+            [
+                'isDisable'=>"1",
+                'dateOfDisable'=>$current_date_time
+            ]
+           );
+        if($check){
+            return redirect()->action([CrudController::class,'showData']);
+        }
+    }
 }
