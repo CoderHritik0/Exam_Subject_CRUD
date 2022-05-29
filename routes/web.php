@@ -21,4 +21,5 @@ Route::get('/', function () {
 Route::post('Crud',[CrudController::class,'addData']);
 Route::GET('Table',[CrudController::class,'showData']);
 Route::POST('Table',[CrudController::class,'update']);
+Route::GET('delete/{esm_id}',[CrudController::class,'delete']);
 Route::view('Crud', 'crud');

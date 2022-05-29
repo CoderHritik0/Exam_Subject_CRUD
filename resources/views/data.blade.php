@@ -268,7 +268,7 @@
                 <h3 class="card-title">Database</h3>
             </div>
             <div class="card-body">
-                <table id="exam_subject" class="table table-bordered table-hover text-center bg-light">
+                <table id="exam_subject" class="table cell-border table-bordered table-hover text-center bg-light">
                     <thead>
                         <tr>
                             <th>Exam Subject Marks ID</th>
@@ -283,7 +283,7 @@
                             <th>Date Of Practical Exam</th>
                             <th>Total Marks of Practical Exam</th>
                             <th>Passing Marks of Practical Exam</th>
-                            <th>Action</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -302,7 +302,8 @@
                                 <td>{{ $i["practical_dateOfExam"] }}</td>
                                 <td>{{ $i["practical_totalMarks"] }}</td>
                                 <td>{{ $i["practical_passingMarks"] }}</td>
-                                <td><button type="button" id={{$i['esm_id']}} class="edit btn btn-outline-primary m-1" data-bs-toggle="modal" data-bs-target="#EditModal">Edit</button></td>
+                                <td><button type="button" id={{$i['esm_id']}} class="edit btn btn-outline-primary m-1" data-bs-toggle="modal" data-bs-target="#EditModal">Edit</button>
+                                <a href={{'delete/'.$i['esm_id']}} onclick="return confirm('Are you sure to want to delete it?')"><button class='delete btn btn-outline-danger m-1'>Delete</button></a></td>
                             </tr>
                             @endif
                         @endforeach 
@@ -321,7 +322,7 @@
                             <th>Date Of Practical Exam</th>
                             <th>Total Marks of Practical Exam</th>
                             <th>Passing Marks of Practical Exam</th>
-                            <th>Action</th>
+                            <th>Actions</th>
                         </tr>
                     </tfoot>
                 </table>

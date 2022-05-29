@@ -57,4 +57,19 @@ class CrudController extends Controller
             return redirect()->action([CrudController::class,'showData']);
         }
     }
+    function delete($esm_id)
+    {
+        $current_date_time = \Carbon\Carbon::now()->toDateTimeString();
+        $check= DB::table('exam_subjects')
+        ->where('esm_id',$esm_id)
+        ->update(
+            [
+                'isDelete'=>"1",
+                'dateOfDeletion'=>$current_date_time
+            ]
+           );
+        if($check){
+            return redirect()->action([CrudController::class,'showData']);
+        }
+    }
 }
