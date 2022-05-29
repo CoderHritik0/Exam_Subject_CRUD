@@ -20,4 +20,5 @@ Route::get('/', function () {
 
 Route::post('Crud',[CrudController::class,'addData']);
 Route::GET('Table',[CrudController::class,'showData']);
+Route::POST('Table',[CrudController::class,'update']);
 Route::view('Crud', 'crud');
