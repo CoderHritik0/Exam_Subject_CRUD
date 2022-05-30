@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <title>CRUD</title>
 
@@ -28,6 +28,7 @@
         />
     </head>
     <body class="bg-secondary">
+        <!-- Navbar -->
         <nav class="navbar navbar-expand-lg bg-light navbar-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">CRUD_APP</a>
@@ -62,11 +63,12 @@
                 </div>
             </div>
         </nav>
+        <!-- Navbar Ended -->
         <div class="card card-primary m-3 text-dark bg-light">
             <div class="card-header">
                 <h3 class="card-title">CRUD Form for exam_subject table</h3>
             </div>
-
+            <!-- Data Submission Form -->
             <form class="form-horizontal" action="/Crud" method="POST">
                 @csrf
                 <div class="card-body">
@@ -273,6 +275,7 @@
                     </div>
                 </div>
             </form>
+            <!-- Data Submission Form Ended -->
         </div>
     </body>
 </html>
