@@ -9,4 +9,5 @@ class exam_subject extends Model
 {
     use HasFactory;
     public $timestamps=false;
+    public $table="exam_subject";
 }
